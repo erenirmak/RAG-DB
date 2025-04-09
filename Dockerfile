@@ -1,6 +1,11 @@
 # Start from pgvector image with PostgreSQL 16
 FROM pgvector/pgvector:pg16
 
+# Set environment variables for PostgreSQL user and password
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+ENV POSTGRES_DB=postgres
+
 # Install required packages for building Apache AGE
 RUN apt-get update && \
     apt-get install -y \
